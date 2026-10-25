@@ -994,7 +994,7 @@ jobs:
       # The tag carries the ref and the commit because this is a build, not a release: the ZIP
       # from a PR run says so in its own name and in module.prop.  The ref's slashes are folded
       # to dashes FIRST: a branch called pr/someone would otherwise turn the output path into
-      # dist/susfs_guard_lkm-module-pr/someone-<sha>-arm64.zip - a directory - and the upload
+      # dist/arkael_dev_susfs-module-pr/someone-<sha>-arm64.zip - a directory - and the upload
       # below would report "no files were found" against dist/*.zip.
       - name: Pack the module
         run: |
@@ -1003,12 +1003,12 @@ jobs:
           python tools/pack_module.py --ko-dir ko --insmod bin/susfs_insmod \
             --tag "$tag" --sha "$GITHUB_SHA" --run-id "$GITHUB_RUN_ID" \
             --ddk-images ddk-images.json \
-            --out "dist/susfs_guard_lkm-module-$tag-arm64.zip"
+            --out "dist/arkael_dev_susfs-module-$tag-arm64.zip"
           ls -l dist
 
       - name: Upload the flashable module
         uses: actions/upload-artifact@v6
         with:
-          name: susfs_guard_lkm-module-arm64
+          name: arkael_dev_susfs-module-arm64
           path: dist/*.zip
           if-no-files-found: error

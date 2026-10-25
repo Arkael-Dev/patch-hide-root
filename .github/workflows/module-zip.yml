@@ -95,7 +95,7 @@ jobs:
           set -euo pipefail
           python tools/pack_module.py --ko-dir assets --insmod assets/susfs_insmod \
             --tag "$TAG" --sha "$SHA" --run-id "$RUN" --ddk-images ddk-images.json \
-            --out "dist/susfs_guard_lkm-module-$TAG-arm64.zip"
+            --out "dist/arkael_dev_susfs-module-$TAG-arm64.zip"
           ls -l dist
       # The .ko set and the loader are attached from the same build, so the release page's
       # assets are as traceable as the ZIP's provenance.json.
