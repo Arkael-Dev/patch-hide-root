@@ -4,6 +4,14 @@
 # "$2/kmis" (one <android-os>-<kver> per line), so adding a KMI needs no edit here.
 select_kmi() {
   rel="$1"
+  # Kernel Arkael: osrelease nggak bawa tag android<N> (mis. "5.10.272-Arkael/8eab6f338"),
+  # jadi versi dasar di-map langsung ke 1 target GKI yang Arkael build.
+  case "$rel" in
+    5.10.*-Arkael/*) echo "android12-5.10"; return 0 ;;
+    6.1.*-Arkael/*)  echo "android14-6.1";  return 0 ;;
+    6.6.*-Arkael/*)  echo "android15-6.6";  return 0 ;;
+    6.12.*-Arkael/*) echo "android16-6.12"; return 0 ;;
+  esac
   while IFS= read -r kmi; do
     [ -n "$kmi" ] || continue
     os="${kmi%-*}"
