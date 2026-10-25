@@ -54,3 +54,9 @@ GPL-2.0，见 [LICENSE](LICENSE)。移植来源：[susfs4ksu](https://gitlab.com
 ## 免责声明
 
 仅用于技术研究与学习。在自担风险的前提下使用。
+
+---
+## Catatan Arkael-Dev
+Source asli: **inforcqb/susfs4ksu-lkm** — https://github.com/inforcqb/susfs4ksu-lkm
+Repo ini dipakai & disesuaikan untuk arkael-kernel-a12-5.10 (KernelSU-Next + hook manual buatan Arkael-Dev).
+Kredit logic & hook susfs: inforcqb, simonpunk/susfs4ksu, SukiSU-Ultra — lisensi GPL-2.0 (lihat LICENSE).
