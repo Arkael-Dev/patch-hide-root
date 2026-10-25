@@ -1,4 +1,4 @@
-# patch-hide-root (Arkael-Dev)
+# patch-hide-root
 
 Loadable kernel module (LKM) loader for **SUSFS**, built and adapted specifically for the **Arkael** kernel (`arkael-kernel-a12-5.10` and related GKI variants 5.10 / 6.1 / 6.6 / 6.12, KernelSU-Next + manual hooks).
 
