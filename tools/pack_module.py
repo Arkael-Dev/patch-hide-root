@@ -51,13 +51,14 @@ def main():
     # the module has not run yet and load.sh replaces it with the outcome of the boot - a
     # device where the load failed and one where it worked should not look the same.
     module_prop = (
-        "id=susfs_guard_lkm\n"
-        "name=SUSFS Guard (LKM)\n"
+        "id=arkael_dev_susfs\n"
+        "name=Arkael-Dev SUSFS Loader\n"
         f"version={args.tag}\n"
         f"versionCode={version_code}\n"
-        "author=inforcqb\n"
+        "author=Arkael-Dev\n"
         f"description=not loaded yet - loads the matching .ko on boot "
         f"({len(kmis)} arm64 KMIs, {low}-{high}). Loader only, no rules.\n"
+        "updateJson=https://raw.githubusercontent.com/Arkael-Dev/patch-hide-root/main/update.json\n"
     )
     ddk_images = []
     if args.ddk_images:

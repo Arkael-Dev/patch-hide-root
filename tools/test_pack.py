@@ -30,7 +30,7 @@ def main():
                     "bin/susfs_insmod", "provenance.json", "LICENSE"} | {f"lib/susfs_guard_lkm-{k}.ko" for k in kmis}
             assert not need - names, f"missing: {need - names}"
             prop = z.read("module.prop").decode()
-            assert "id=susfs_guard_lkm" in prop and "version=v0.0.0-test" in prop, prop
+            assert "id=arkael_dev_susfs" in prop and "version=v0.0.0-test" in prop, prop
             assert z.read("kmis").decode().split() == kmis
             assert "early_load" not in names
             provenance = z.read("provenance.json").decode()

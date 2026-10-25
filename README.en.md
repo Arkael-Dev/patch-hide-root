@@ -37,7 +37,7 @@ To skip picking the `.ko` by hand, each release also ships a packaged module `su
 Loading normally runs in the module's `post-fs-data` stage. To opt into loading from the earlier common `post-fs-data.d` stage, run as root:
 
 ```sh
-touch /data/adb/modules/susfs_guard_lkm/early_load
+touch /data/adb/modules/arkael_dev_susfs/early_load
 ```
 
 Reboot to apply. Remove that file and reboot to return to normal loading; upgrades preserve it. Both stages use the same loader, skip an existing SUSFS interface, and respect safe mode and disabled/removed modules. Uninstall removes only this module's common dispatcher; it does not unload the running LKM.

@@ -1,6 +1,6 @@
 #!/system/bin/sh
-INSTALLED=/data/adb/modules/susfs_guard_lkm
-STAGED=/data/adb/modules_update/susfs_guard_lkm
+INSTALLED=/data/adb/modules/arkael_dev_susfs
+STAGED=/data/adb/modules_update/arkael_dev_susfs
 [ "$(getprop persist.sys.safemode)" != 1 ] || exit 0
 [ "$(getprop ro.sys.safemode)" != 1 ] || exit 0
 if [ -d "$INSTALLED" ]; then

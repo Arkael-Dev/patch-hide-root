@@ -6,7 +6,7 @@ REL=$(cat /proc/sys/kernel/osrelease) || abort "- cannot read kernel release."
 . "$MODPATH/kmi.sh"
 KMI=$(select_kmi "$REL" "$MODPATH") || abort "- no packaged .ko for this kernel: $REL"
 [ -s "$MODPATH/lib/susfs_guard_lkm-$KMI.ko" ] || abort "- missing .ko for $KMI."
-INSTALLED=/data/adb/modules/susfs_guard_lkm
+INSTALLED=/data/adb/modules/arkael_dev_susfs
 HOOK=/data/adb/post-fs-data.d/00-susfs-guard-lkm.sh
 if { [ -e "$HOOK" ] || [ -L "$HOOK" ]; } && ! cmp -s "$HOOK" "$MODPATH/early-dispatch.sh"; then
   [ -f "$INSTALLED/early-dispatch.sh" ] && cmp -s "$HOOK" "$INSTALLED/early-dispatch.sh" || abort "- a different early dispatcher already exists at $HOOK."
