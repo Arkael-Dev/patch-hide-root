@@ -1,3 +1,5 @@
+> 🌐 **Languages:** [中文](README.md) | [English](README.en.md)
+
 [English](README.en.md)
 
 [x64设备兼容](https://github.com/ymuuuu/susfs4ksu-lkm-x64)
